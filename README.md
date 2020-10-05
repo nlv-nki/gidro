@@ -10,6 +10,6 @@
 
 ### Быстрые ссылки
 
--[Главная](https://nlv-nki.github.io/gidro/public/index.html)
--[Каталог](https://nlv-nki.github.io/gidro/public/catalog.html)
--[Карточка товара](https://nlv-nki.github.io/gidro/public/product.html)
+* [Главная](https://nlv-nki.github.io/gidro/public/index.html)
+* [Каталог](https://nlv-nki.github.io/gidro/public/catalog.html)
+* [Карточка товара](https://nlv-nki.github.io/gidro/public/product.html)
