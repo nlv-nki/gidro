@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %Barlow-regular;
+  width: 100%;
+
+&__item {
+  margin-right: 27px;
+  padding: 5px 10px;
+  color: #C4C4C4;
+  font-size: 18px;
+  line-height: 22px;
+
+}
+
+&__item-active {
+  border: 2px solid #1C62CD;
+  color: #1C62CD;
+
+}
+
+}

@@ -1,0 +1,19 @@
+/* Libs styles */
+@import "vendor/_libs";
+/*  varibles */
+@import "utils/_variables";
+/* mixins  */
+@import "utils/mixins/_font";
+/* Base styles */
+@import "utils/_base";
+/* Fonts styles */
+@import "utils/_fonts";
+
+/* Components style */
+@import "../blocks/components/components";
+
+
+/* Modules style */
+@import "../blocks/modules/modules";
+
+

@@ -1,0 +1,42 @@
+// Colors
+$base-color: #fff;
+$accent-color: #4AF6CD;;
+$additional-color: #304054;
+$background-color: #fff;
+$text-color: #2F3035;
+$base-font: 'SFProDisplay-Regular', sans-serif;
+// Fonts
+
+%sf-regular {
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+}
+
+
+%sf-medium {
+  font-family: 'SFProDisplay-Medium', sans-serif;
+  font-weight: 500;
+}
+
+
+%sf-semibold {
+  font-family: 'SFProDisplay-Semibold', sans-serif;
+  font-weight: 600;
+}
+
+%sf-bold {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+}
+
+
+%Barlow-Bold {
+  font-family: 'Barlow-Bold', sans-serif;
+  font-weight: 600;
+}
+
+
+%Barlow-regular {
+  font-family: 'Barlow-Regular', sans-serif;
+  font-weight: 400;
+}

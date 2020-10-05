@@ -1,0 +1,12 @@
+.tabs {
+  &__item--active {
+    border-bottom: 3px solid #1c62cd;
+  }
+  &__content-item {
+    display: none;
+  }
+  &__content-item--active {
+    display: block;
+
+  }
+}

@@ -1,0 +1,43 @@
+.header-menu {
+  &__list {
+    display:flex;
+  }
+  &__item:not(:first-child) {
+    padding-left: 50px;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .header-menu {
+    &__item:not(:first-child) {
+      padding-left: 25px;
+    }
+  }
+}
+
+
+@media  (max-width: 760px) {
+  .header-menu  {
+    &__list {
+      display: none;
+    }
+  }
+}
+
+
+
+@media  (max-width: 480px) {
+  .header-menu  {
+    &__list {
+      display: none;
+    }
+  }
+}
+
+

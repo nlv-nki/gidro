@@ -1,0 +1,154 @@
+.footer {
+  width: 100%;
+  height: 232px;
+  background-color: #F0F0F4;
+  padding: 45px 0 27px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    @extend %sf-regular
+  }
+
+  &__subscription {
+    width: 278px;
+    @extend %sf-bold
+  }
+
+  &__menu-title {
+    background-color: transparent;
+    margin-bottom: 5px;
+    @extend %sf-bold
+  }
+
+  &__menu-item {
+    margin-bottom: 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__bottom {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &__form {
+    display: flex;
+    margin: 34px 0;
+  }
+
+  &__form-input {
+    width: 186px;
+    height: 33px;
+    border: none;
+  }
+
+  &__form-button {
+    width: 109px;
+    height: 33px;
+    background: #1c62cd;
+    color: #fff;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border: none;
+    padding: 0;
+
+  }
+
+  &__bottom {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    a:first-child {
+      margin-right: 80px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .footer {
+    &__top {
+      flex-wrap: wrap;
+    }
+    &__bottom {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: auto;
+    .product__favorites-icon:last-child {
+      margin-right:0;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer {
+    height: auto;
+    background-color:#fff;
+    .container {
+      padding:0
+    }
+    &__top {
+      flex-direction: column;
+      background-color: #F9F9FC;
+
+    }
+
+    &__subscription {
+      padding:17px 10px 0;
+    }
+    &__information-menu,
+    &__shop-menu {
+      .footer__menu-list {
+        display: none;
+      }
+      .footer__menu-title {
+        border-top:none;
+      }
+    }
+    &__menu-title {
+      padding:16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color:#7F7F7F;
+      border-top: 2px solid #F0F0F4;
+      border-bottom: 2px solid #F0F0F4;
+      margin-bottom: 0;
+    }
+
+    &__social {
+      padding-top: 40px;
+      padding-bottom:100px;
+      background-color:#fff;
+      justify-content: center;
+    }
+    &__bottom {
+      flex-direction: column;
+      a:first-child {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

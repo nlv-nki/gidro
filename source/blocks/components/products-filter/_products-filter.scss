@@ -1,0 +1,258 @@
+.products-filter {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__tabs-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  &__tab-item {
+    text-transform: uppercase;
+    margin-right: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.09em;
+  }
+
+&__drop-item-title {
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 23px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+&__drop-item-title::before {
+  position:absolute;
+  content: '';
+  background-image: url('../img/svg/sprite/sprite.svg#arrow-down-filter');
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: 3px;
+  opacity: .3;
+  transform: rotate(-90deg);
+  transition: all .3s;
+}
+
+&__drop-item-title--active::before {
+  transform: rotate(0deg);
+}
+
+
+&__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  .irs.irs--round.js-irs-0 {
+    position: relative;
+    top: -30px;
+  }
+}
+
+&__content-box {
+  font-size: 13px;
+  line-height: 17px;
+  margin:0 auto;
+}
+&__content-box:first-child {
+  margin-left: 0;
+}
+
+
+&__content-box--full-width {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 20px;
+
+    label {
+      margin-right: auto;
+    }
+}
+
+
+.jq-checkbox {
+  background:#fff;
+  width: 14px;
+  height: 14px;
+  border:1px solid #C4C4C4;
+  border-radius: 1px;
+  box-shadow:none;
+  vertical-align:-1px;
+  margin:0 8px 0 0;
+}
+
+.jq-checkbox.checked {
+  background:#1C62CD;
+  border:none;
+}
+.jq-checkbox.checked .jq-checkbox__div {
+  width: 10px;
+  height: 5px;
+  margin: 3px 0 0 2px;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: rotate(-50deg);
+}
+.irs--round.irs-with-grid {
+  width: 100%;
+}
+
+.irs, .irs-line {
+  width: 100%;
+}
+
+
+.irs--round .irs-handle {
+  background-color: #006cfa;
+  width: 8px;
+  height: 8px;
+  top: 34px;
+}
+
+.irs-min,
+.irs-max {
+  margin-top: 60px;
+}
+
+
+&__range-controls {
+  position: relative;
+  top: -10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 17px;
+  @extend %Barlow-regular;
+  label {
+    width:80px;
+  }
+  input {
+    width: 50px;
+    border: none;
+    border-bottom:1px solid #2F3035;
+    outline: none;
+  }
+}
+
+
+&__option-item {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+&__option-item-title {
+
+  font-size: 15px;
+  line-height: 19px;
+  @extend %sf-semibold;
+
+  padding-bottom: 6px;
+  width:268px;
+  border-bottom: 2px solid #C4C4C4;
+
+}
+&__option-item-list {
+  position: relative;
+  right: 60px;
+  bottom: 10px;
+
+  .jq-selectbox__select {
+    font-size: 14px;
+    line-height: 40px;
+    border: none;
+    background: none;
+    box-shadow:  none;
+    padding: 0 34px 0 10px;
+    @extend %Barlow-regular;
+  }
+  .jq-selectbox__trigger {
+    border-left:none;
+  }
+  .jq-selectbox__trigger-arrow {
+    top: 17px;
+  }
+
+  .jq-selectbox.opened .jq-selectbox__trigger-arrow {
+    transform: rotate(180deg);
+  }
+
+  .jq-selectbox.focused .jq-selectbox__select {
+    border: none;
+}
+
+}
+
+&__input-model {
+  width: 291px;
+  height: 30px;
+  border: 1px solid #E0E0E0;
+  padding: 8px 20px 11px;
+  margin-bottom: 25px;
+
+
+}
+&__input-model::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: #BDBEC2;
+}
+
+&__submit-btn {
+  width: 252px;
+  height: 50px;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+&__reset-btn {
+  display: inline-block;
+  width: 131px;
+  align-self: center;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  margin: 15px auto;
+}
+
+&__sticker {
+  display: inline-block;
+  height: 25px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  padding:6px 15px;
+  margin: 0 auto;
+  color: #FFFFFF;
+
+}
+
+&__sticker--sale {
+  background: #1C62CD;
+}
+
+&__sticker--disabled {
+  background: #F0F0F4;
+}
+
+&__sticker--dealer{
+  background: #2F3035;
+}
+
+}
+
+@media (max-width: 480px) {
+  .products-filter {
+    display: none;
+  }
+}

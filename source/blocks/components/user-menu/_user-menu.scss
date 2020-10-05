@@ -1,0 +1,23 @@
+.user-menu {
+  &__list {
+    margin-right: 15px;
+  }
+  &__item {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: #2F3035;
+  }
+}
+
+@media (max-width: 960px) {
+  .user-menu {
+    &__list {
+      display:flex;
+    }
+  }
+
+}

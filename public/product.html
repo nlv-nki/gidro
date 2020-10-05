@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="icon" href="img/images/favicon-16x16.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/images/favicon-32x32.png" sizes="32x32" type="image/png"> -->
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <script src="js/libs.min.js"></script>
+
+  <title>Drive Moto Shop</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <nav class="header-menu">
+            <button class="humburger__btn">
+          
+              <svg class="humburger__icon">
+                <use xlink:href="img/svg/sprite/sprite.svg#humburger__icon"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#user-icon"></use>
+                </svg>
+              </span>Войти</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#user-icon"></use>
+                </svg>
+              </span>Регистрация</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                </svg>
+              </span>Избранное</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#cart-icon"></use>
+                </svg>
+              </span>Корзина</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#mobile-menu__shop-icon"></use>
+                </svg>
+              </span>Магазины</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#mobile-menu__sale-icon"></use>
+                </svg>
+              </span>Акции</li>
+              <li><span class="mobile-menu__icon">
+                <svg class="humburger__icon">
+                  <use xlink:href="img/svg/sprite/sprite.svg#mobile-menu__delivery-icon"></use>
+                </svg>
+              </span>Доставка и оплата</li>
+              <li>Квадроциклы</li>
+              <li>Катера</li>
+              <li>Гидроциклы</li>
+              <li>Лодки</li>
+              <li>Вездеходы</li>
+              <li>Снегоходы</li>
+              <li>Двигатели</li>
+              <li>Запчасти</li>
+          
+            </ul>
+            <ul class="header-menu__list">
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">
+                  Магазины
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">
+                  Акции
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link" href="#">
+                  Доставка и оплата
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a class="logo" href="#">
+            <img class="logo__img" src="img/svg/logo.svg">
+          </a>
+          <div class="header__adress">
+            <p class="header__adress-text">
+                Москва,  ул. Лженауки  25
+            </p>
+          </div>
+          <div class="user-menu">
+            <ul class="user-menu__list">
+              <li class="user-menu__item">
+                <a class="user-menu__link" href="#">
+                  <svg class="user-menu__icon">
+                    <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="user-menu__item">
+                <a class="user-menu__link" href="#">
+                  <svg class="user-menu__icon">
+                    <use xlink:href="img/svg/sprite/sprite.svg#user-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="user-menu__item">
+                <a class="user-menu__link basket" href="#">
+                  <svg class="user-menu__icon">
+                    <use xlink:href="img/svg/sprite/sprite.svg#cart-icon"></use>
+                  </svg>
+                  <span class="basket__num">1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-inner">
+          <div class="menu-categories">
+            <ul class="menu-categories__list">
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Квадроциклы</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Катера</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Гидроциклы</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Лодки</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Вездеходы</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Снегоходы</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Двигатели</a></li>
+              <li class="menu-categories__item"><a class="menu-categories__link" href="#">Запчасти</a></li>
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="product-page">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a href="#" class="breadcrumbs__link-item">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a href="#" class="breadcrumbs__link-item">Гидроциклы</a></li>
+          </ul>
+        </div>
+        <div class="product-page__main">
+    
+          <div class="product-page__top">
+            <div class="product-page__appearance">
+    
+              <img src="../img/content/goods/gidrotsikl-brp-seedoo-gti-155hp-se-long-beach-blue-metallic_large.jpg">
+    
+              <div class="product-page__price">
+                <div class="product-page__price--old">1 200 475 ₽</div>
+                <div class="product-page__price--current">1 100 475 ₽</div>
+              </div>
+            </div>
+            <div class="product-page__description">
+              <h2 class="product-page__title-description">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h2>
+              <p class="product-page__vendor-id">Код товара: 366666-2 </p>
+    
+              <div class="product-page__description-buttons">
+    
+    
+    
+                <button class="product__favorites ">
+                  <svg class="product__favorites-icon">
+                    <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                  </svg>
+                </button>
+    
+                <button class="product__favorites ">
+                  <svg class="product__favorites-icon">
+                    <use xlink:href="img/svg/sprite/sprite.svg#product-page__vote"></use>
+                  </svg>
+                </button>
+    
+    
+                <div id="product-page__star-rate"></div>
+    
+    
+    
+              </div>
+    
+    
+              <div class="product-page__description-menu menu-categories">
+                <ul class="menu-categories__list tabs">
+                  <li class="menu-categories__item">
+                    <a class="menu-categories__link menu-categories__link--active tabs__item tabs__item--active"
+                      href="#product-page-tab__characteristic-short">Основные характеристики</a></li>
+                  <li class="menu-categories__item"><a class="menu-categories__link tabs__item"
+                      href="#product-page-tab__avalible-markets">Наличие в магазине</a></li>
+                </ul>
+              </div>
+              <div class="product-page__description-content tabs__content">
+                <div id="product-page-tab__characteristic-short" class="tabs__content-item tabs__content-item--active">
+                  <table class="product-page__table">
+                    <tr>
+                      <td> Производитель</td>
+                      <td>Канада </td>
+                    </tr>
+                    <tr>
+                      <td> Количество мест, шт: </td>
+                      <td> 3</td>
+                    </tr>
+                    <tr>
+                      <td>Мощность, л.с. </td>
+                      <td> 155</td>
+                    </tr>
+                    <tr>
+                      <td>Тип двигателя </td>
+                      <td> Бензиновый</td>
+                    </tr>
+                    <tr>
+                      <td>Год выпуска </td>
+                      <td> 2018</td>
+                    </tr>
+                  </table>
+    
+    
+                </div>
+                <div id="product-page-tab__avalible-markets" class="tabs__content-item ">
+                  Наличие
+                </div>
+              </div>
+    
+    
+              <button class="product-page__buy-button">купить</button>
+    
+            </div>
+    
+          </div>
+    
+    
+          <div class="product-page__details">
+            <div class="product-page__menu-details menu-categories">
+              <ul class="menu-categories__list product-page__menu-list tabs">
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link menu-categories__link--active tabs__item tabs__item--active"
+                    href="#product-page-tab__about">О товаре</a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#product-page-tab__characteristic">Характеристики</a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#product-page-tab__reviews">Отзывы</a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#product-page-tab__pickup">Самовывоз </a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#product-page-tab__delivery">Доставка</a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#tab-5">Cервис</a>
+                </li>
+                <li class="menu-categories__item">
+                  <a class="menu-categories__link tabs__item" href="#tab-6">Гарантия</a>
+                </li>
+              </ul>
+            </div>
+            <div class="product-page__details-content tabs__content">
+              <div id="product-page-tab__about" class="tabs__content-item tabs__content-item--active">
+    
+                <p>
+                  Модель Sea-Doo GTI SE – это по-прежнему один из самых эффективных способов развлечь всю семью на воде.
+                  Пусть отдых всей семьей будет ярким!
+    
+                  Среди особенностей гидроцикла – учебный ключ, который позволит Вам и Вашим близким кататься с уверенностью
+                  и под полным контролем. В режиме ECO модель Sea-Doo GTI SE 155 увеличивает топливную автономность до 26%.
+                  Sea-Doo GTI SE поставляется с туринговым сиденьем и подножкой, а также комплектуется такими
+                  высокотехнологичными системами, как интеллектуальная тормозная система и реверс (iBRP).
+                </p>
+    
+              </div>
+              <div id="product-page-tab__characteristic" class="tabs__content-item ">
+    
+    
+                <table width="100%" class="product-page__table">
+                  <tbody>
+                    <tr>
+                      <td colspan="2">ДВИГАТЕЛЬ</td>
+                    </tr>
+    
+                    <tr>
+                      <td width="40%">Рабочий объем, куб.см / мощность, л.с.</td>
+                      <td>1494 / 155</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Диаметр цилиндра, мм / ход поршня, мм</td>
+                      <td>100 мм x 63,4 мм</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Тип</td>
+                      <td>4-тактный, 3-цилиндровый Rotax 1494</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Система впуска</td>
+                      <td>Без нагнетателя, диаметр дросселя 60 мм</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Степень сжатия</td>
+                      <td>10,6:1</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Система охлаждения</td>
+                      <td>С закрытым контуром</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Топливо</td>
+                      <td>АИ-95</td>
+                    </tr>
+    
+                    <tr>
+                      <td colspan="2">ВОДОМЕТНЫЙ ДВИЖИТЕЛЬ</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Водомет</td>
+                      <td>Алюминиевый, одноступенчатый, осевого типа, с большой ступицей, 10 лопаток статора</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Привод вала водомета / система регулировки трима VTS.</td>
+                      <td>С прямым приводом, передняя/нейтраль/задняя / Механическая система VTS</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Импеллер</td>
+                      <td>Нержавеющая сталь</td>
+                    </tr>
+    
+                    <tr>
+                      <td colspan="2">ГАБАРИТЫ, МАССА, ВМЕСТИМОСТЬ, ЗАПРАВОЧНЫЕ ЕМКОСТИ</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Длина, мм</td>
+                      <td>3368</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Ширина, мм</td>
+                      <td>1231</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Высота, мм</td>
+                      <td>1118</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Сухой вес, кг</td>
+                      <td>338</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Топливный бак, л</td>
+                      <td>60</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Емкость багажных отделений, л</td>
+                      <td>116,6</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Количество мест</td>
+                      <td>3</td>
+                    </tr>
+    
+                    <tr>
+                      <td colspan="2">ЦВЕТ</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Цветовая гамма</td>
+                      <td>Черный/Оранжевый</td>
+                    </tr>
+    
+                    <tr>
+                      <td colspan="2">КОРПУС, ПРИБОРЫ, ОБОРУДОВАНИЕ</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Тип корпуса</td>
+                      <td>LFI, из композитных материалов</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Приборы</td>
+                      <td>23 функции, включая указатель уровня топлива, тахометр, спидометр, режим Туринг/Спорт, новый
+                        экономичный режим ECO, счетчик моточасов, компас</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Система O.P.A.S.</td>
+                      <td>O.T.A.S.</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Система Sea-Doo Learning Key</td>
+                      <td>Стандарт</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Система D-Sea-Bel</td>
+                      <td>Стандарт</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Зеркала</td>
+                      <td>Стандарт</td>
+                    </tr>
+    
+                    <tr>
+                      <td>Посадочная подножка</td>
+                      <td>Стандарт</td>
+                    </tr>
+    
+                    <tr class="">
+                      <td>Комплектация</td>
+                      <td>Комплектация SE: посадочная подножка, хромированные детали. Дополнительные датчики: система
+                        регулировки положения водомета VTS, указатель расхода топлива, часы.</td>
+                    </tr>
+                  </tbody>
+                </table>
+    
+    
+    
+              </div>
+    
+              <div id="product-page-tab__reviews" class="tabs__content-item">
+    
+                отзывы
+    
+              </div>
+    
+              <div id="product-page-tab__pickup" class="tabs__content-item">
+    
+                <div class="product-page__search-shop">
+                  <h3>Магазин</h3>
+                  <input type="text" class="product-page__search-field">
+                  <label>
+    
+                    <input type="checkbox">
+                    Забрать сегодня
+                  </label>
+                  <label>
+    
+                    <input type="checkbox">
+                    Забрать в течение недели
+                  </label>
+                </div>
+                <table class="product-page__table product-page__table-pickup">
+                  <thead>
+                    <tr>
+                      <th>Адрес</th>
+                      <th>Режим работы</th>
+                      <th>Доступно</th>
+                      <th colspan="2">Количество</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Москва, ул. Науки 25</td>
+                      <td>пн-сб: 08:00-19:00 <br> вс:09:00-17:00 </td>
+                      <td>В наличии</td>
+                      <td>2</td>
+                      <td><button class="product-page__buy-button product-page__buy-button--small">купить</button></td>
+                    </tr>
+    
+    
+                    <tr>
+                      <td>Москва, ул. Южная 134</td>
+                      <td>пн-сб: 08:00-19:00 <br> вс:09:00-19:00 </td>
+                      <td>В наличии</td>
+                      <td>5</td>
+                      <td><button class="product-page__buy-button product-page__buy-button--small">купить</button></td>
+    
+                    </tr>
+    
+    
+                    <tr>
+                      <td>Санкт-Петербург, ул. Красная 19</td>
+                      <td>пн-сб: 11:00-16:00 <br> вс:10:00-19:00</td>
+                      <td>В наличии</td>
+                      <td>2</td>
+                      <td><button class="product-page__buy-button product-page__buy-button--small">купить</button></td>
+    
+                    </tr>
+                    <tr>
+                      <td>Киев, ул Шевченко 167</td>
+                      <td>пн-сб: 11:00-16:00 <br> вс:10:00-19:00</td>
+                      <td>Нет в наличии</td>
+                      <td>0</td>
+                      <td><button class="product-page__buy-button product-page__buy-button--small">купить</button></td>
+    
+                    </tr>
+    
+    
+    
+                  </tbody>
+                </table>
+    
+              </div>
+              <div id="product-page-tab__delivery" class="tabs__content-item">
+    
+                <p>Делайте ваши запросы и наши менеджеры в кратчайший срок предложат вам помощь в оформлении и организации
+                  бесплатной доставки , либо затрат на транспорт по минимальной цене (скидка идет в зачет доставки)</p>
+    
+              </div>
+    
+    
+    
+    
+    
+            </div>
+          </div>
+    
+    
+          <!---блок "С этим товаром покупают" -->
+          <div class="product-suggestion__inner">
+            <h2 class="product-suggestion__title">С этим товаром покупают</h2>
+    
+            <div class="product-suggestion__menu menu-categories">
+              <ul class="menu-categories__list product-suggestion__menu-list tabs">
+                <li class="menu-categories__item product-suggestion__item"><a
+                    class="menu-categories__link tabs__item tabs__item--active" href="#tab-zapchasti">запчасти</a></li>
+                <li class="menu-categories__item product-suggestion__item"><a class="menu-categories__link tabs__item"
+                    href="#tab-engine">моторы</a></li>
+                <li class="menu-categories__item product-suggestion__item"><a class="menu-categories__link tabs__item"
+                    href="#tab-3">шины </a></li>
+                <li class="menu-categories__item product-suggestion__item"><a class="menu-categories__link tabs__item"
+                    href="#tab-4">электроника</a></li>
+                <li class="menu-categories__item product-suggestion__item"><a class="menu-categories__link tabs__item"
+                    href="#tab-5">инструменты</a></li>
+                <li class="menu-categories__item product-suggestion__item"><a class="menu-categories__link tabs__item"
+                    href="#tab-6">аксессуары</a></li>
+              </ul>
+            </div>
+    
+            <div class="product-suggestion__content tabs__content">
+              <div id="tab-zapchasti" class="tabs__content-item tabs__content-item--active">
+                <div class="product-suggestion__slider">
+                  <div class="swiper-container product-suggestion__slider-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide product-suggestion__slider-item product__item">
+                        <div class="product__not-available">
+                          <p>нет в наличии</p>
+                          <a href="#">Сообщить о поступлении</a>
+                        </div>
+                        <button class="product__favorites product__favorites--active">
+                          <svg class="product__favorites-icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                          </svg>
+                        </button>
+                        <div class="product__head">
+                          <a href="#" class="product__img-link">
+                            <img class="product__img" src="img/content/goods/waterproof-backpack.jpg">
+                            <div class="product__quick-view">
+                              Посмотреть товар
+                            </div>
+                          </a>
+                          <!--product__head-->
+                        </div>
+                        <div class="product__info">
+                          <p class="product__title">
+                            <a href="#" title="Перейти на страницу товара" class="product__link">
+                              Водонепроницаемый Рюкзак
+                            </a></p>
+                        </div>
+                        <div class="product__footer">
+                          <div class="product__price">
+                            <span class="product__price-current">
+                              9 800₽
+                            </span>
+                          </div>
+                          <button class="product__btn">
+                            <svg class="product__btn-icon">
+                              <use xlink:href="img/svg/sprite/sprite.svg#product__cart-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+    
+                      <div class="swiper-slide product-suggestion__slider-item product__item">
+                        <div class="product__not-available">
+                          <p>нет в наличии</p>
+                          <a href="#">Сообщить о поступлении</a>
+                        </div>
+                        <button class="product__favorites">
+                          <svg class="product__favorites-icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                          </svg>
+                        </button>
+                        <div class="product__head">
+                          <a href="#" class="product__img-link">
+    
+                            <img class="product__img" src="img/content/goods/sos-gelet.jpg">
+                            <div class="product__quick-view">
+                              Посмотреть товар
+                            </div>
+                          </a>
+                          <!--product__head-->
+                        </div>
+                        <div class="product__info">
+                          <p class="product__title">
+                            <a href="#" title="Перейти на страницу товара" class="product__link">
+                              Спасательный жилет BRP Men's Airflow PFD
+    
+                            </a></p>
+                        </div>
+                        <div class="product__footer">
+                          <div class="product__price">
+                            <span class="product__price-current">
+                              6 900₽
+                            </span>
+                          </div>
+                          <button class="product__btn">
+                            <svg class="product__btn-icon">
+                              <use xlink:href="img/svg/sprite/sprite.svg#product__cart-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+    
+                      <div class="swiper-slide product-suggestion__slider-item product__item">
+                        <div class="product__not-available">
+                          <p>нет в наличии</p>
+                          <a href="#">Сообщить о поступлении</a>
+                        </div>
+                        <button class="product__favorites">
+                          <svg class="product__favorites-icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                          </svg>
+                        </button>
+                        <div class="product__head">
+                          <a href="#" class="product__img-link">
+    
+                            <img class="product__img" src="img/content/goods/BRP-Audio-System.jpg">
+                            <div class="product__quick-view">
+                              Посмотреть товар
+                            </div>
+                          </a>
+                          <!--product__head-->
+                        </div>
+                        <div class="product__info">
+                          <p class="product__title">
+                            <a href="#" title="Перейти на страницу товара" class="product__link">
+    
+                              BRP Audio-Premium System
+                            </a></p>
+                        </div>
+                        <div class="product__footer">
+                          <div class="product__price">
+                            <span class="product__price-current">
+                              69 800₽
+                            </span>
+                          </div>
+                          <button class="product__btn">
+                            <svg class="product__btn-icon">
+                              <use xlink:href="img/svg/sprite/sprite.svg#product__cart-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide product-suggestion__slider-item product__item">
+                        <div class="product__not-available">
+                          <p>нет в наличии</p>
+                          <a href="#">Сообщить о поступлении</a>
+                        </div>
+                        <button class="product__favorites">
+                          <svg class="product__favorites-icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                          </svg>
+                        </button>
+                        <div class="product__head">
+                          <a href="#" class="product__img-link">
+    
+    
+                            <img class="product__img" src="img/content/goods/rescue-equipment.jpg">
+                            <div class="product__quick-view">
+                              Посмотреть товар
+                            </div>
+                          </a>
+                          <!--product__head-->
+                        </div>
+                        <div class="product__info">
+                          <p class="product__title">
+                            <a href="#" title="Перейти на страницу товара" class="product__link">
+                              Спасательное
+                              снаряжение
+                            </a></p>
+                        </div>
+                        <div class="product__footer">
+                          <div class="product__price">
+                            <span class="product__price-current">
+                              9 800₽
+                            </span>
+                          </div>
+                          <button class="product__btn">
+                            <svg class="product__btn-icon">
+                              <use xlink:href="img/svg/sprite/sprite.svg#product__cart-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+    
+    
+                      <div class="swiper-slide product-suggestion__slider-item product__item">
+                        <div class="product__not-available product__not-available--active ">
+                          <p>нет в наличии</p>
+                          <a href="#">Сообщить о поступлении</a>
+                        </div>
+                        <button class="product__favorites">
+                          <svg class="product__favorites-icon">
+                            <use xlink:href="img/svg/sprite/sprite.svg#product__likes-icon"></use>
+                          </svg>
+                        </button>
+                        <div class="product__head">
+                          <a href="#" class="product__img-link">
+    
+                            <img class="product__img" src="img/content/goods/waterproof-backpack.jpg">
+                            <div class="product__quick-view">
+                              Посмотреть товар
+                            </div>
+    
+                          </a>
+                          <!--product__head-->
+                        </div>
+                        <div class="product__info">
+                          <p class="product__title">
+                            <a href="#" title="Перейти на страницу товара" class="product__link">
+                              Водонепроницаемая Сумка
+                            </a></p>
+                        </div>
+                        <div class="product__footer">
+                          <div class="product__price">
+                            <span class="product__price-current">
+                              29 800₽
+                            </span>
+                          </div>
+                          <button class="product__btn">
+                            <svg class="product__btn-icon">
+                              <use xlink:href="img/svg/sprite/sprite.svg#product__cart-icon"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+    
+                    </div>
+    
+                  </div>
+    
+                  <div class="product-suggestion__slider-navigation">
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev product-suggestion__swiper-button-prev swiper-button-black"></div>
+                    <div class="swiper-button-next product-suggestion__swiper-button-next swiper-button-black"></div>
+                  </div>
+    
+                </div>
+    
+              </div>
+    
+              <div id="tab-engine" class="tabs__content-item">
+                t2
+              </div>
+    
+            </div>
+    
+          </div>
+          <!---блок "С этим товаром покупают" /-->
+    
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+  
+        <div class="footer__subscription">
+          <p>Подпишитесь на нашу рассылку
+            и узнавайте о акция быстрее</p>
+          <form class="footer__form" action="#">
+            <input class="footer__form-input" type="text">
+            <button class="footer__form-button">Отправить</button>
+          </form>
+        </div>
+        <div class="footer__information-menu">
+          <h3 class="footer__menu-title">Информация </h3>
+  
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item"><a href="#">О компании</a></li>
+            <li class="footer__menu-item"><a href="#">Контакты</a></li>
+            <li class="footer__menu-item"><a href="#">Акции</a></li>
+            <li class="footer__menu-item"><a href="#">Магазины</a></li>
+          </ul>
+        </div>
+        <div class="footer__shop-menu">
+          <h3 class="footer__menu-title">Интернет-магазин </h3>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item"><a href="#">Доставка и самовывоз</a></li>
+            <li class="footer__menu-item"><a href="#">Оплата</a></li>
+            <li class="footer__menu-item"><a href="#">Возврат-обмен</a></li>
+            <li class="footer__menu-item"><a href="#">Новости</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <svg class="product__favorites-icon">
+            <use xlink:href="img/svg/sprite/sprite.svg#instagram-icon"></use>
+          </svg>
+          <svg class="product__favorites-icon">
+            <use xlink:href="img/svg/sprite/sprite.svg#vk-icon"></use>
+          </svg>
+          <svg class="product__favorites-icon">
+            <use xlink:href="img/svg/sprite/sprite.svg#facebook-icon"></use>
+          </svg>
+          <svg class="product__favorites-icon">
+            <use xlink:href="img/svg/sprite/sprite.svg#youtube-icon"></use>
+          </svg>
+        </div>
+  
+      </div>
+      <div class="footer__bottom">
+        <a href="#">Договор оферты</a>
+        <a href="#">Политика обработки персональных данных</a>
+      </div>
+  
+    </div>
+  </footer>
+  <script src="js/main.min.js"></script>
+
+</body>
+
+
+</html>

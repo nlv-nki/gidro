@@ -1,0 +1,156 @@
+.catalog {
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+
+
+  &__sorting {
+    display: flex;
+    align-items: flex-end;
+    width:270px;
+    height: 33px;
+    justify-content: space-evenly;
+
+
+    .jq-selectbox__select {
+      font-size: 14px;
+      line-height: 30px;
+      border: 2px solid #D7D9DF;
+      background: none;
+      box-shadow:  none;
+      padding: 0 34px 0 10px;
+      @extend %Barlow-regular;
+      width:170px;
+    }
+    .jq-selectbox__trigger {
+      border-left:none;
+    }
+
+    .jq-selectbox.focused .jq-selectbox__select {
+      border: 2px solid #D7D9DF;
+  }
+
+
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__item:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  }
+
+  &__aside {
+    width: 285px;
+    padding-right: 10px;
+
+  }
+
+  &__products-list {
+    display: flex;
+    width: 885px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: auto;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  &__properties-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__properties-item {
+    display: inline-block;
+    padding: 4px 22px;
+    background-color: #F0F0F4;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.7;
+  }
+
+  &__view-btn {
+    opacity: .4;
+    cursor: pointer;
+    svg {
+      stroke: #2F3035;
+    }
+  }
+
+  &__view-btn-line {
+    width: 25px;
+    height: 19px;
+    margin-bottom: 1px;
+    stroke-width: 17px;
+  }
+
+  &__view-btn-grid {
+    width: 23px;
+    height: 21px;
+    fill: none;
+    stroke-width: 2px;
+  }
+
+  &__view-btn--active {
+    opacity: 1;
+  }
+  &__btn-mobile-icon {
+    display: none;
+    stroke:#2f3035;;
+    stroke-width: 2px;
+    width: 21px;
+    height: 21px;
+  }
+
+  &__view-btn--filter {
+    opacity: 1;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  .catalog {
+    &__btn-mobile-icon {
+      display: inline-block;
+    }
+    &__aside {
+      display: none;
+    }
+    &__products-list {
+      justify-content: space-around;
+    }
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .catalog {
+    &__properties-wrapper {
+      flex-wrap: wrap;
+    }
+    &__sorting {
+       order: 1;
+       margin-bottom: 10px;
+    }
+    &__properties {
+       order:2;
+    }
+    &__products-list {
+       justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.basket {
+  position: relative;
+  &__num {
+    position: absolute;
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    color: #fff;
+    background-color:#1C62CD;
+    border-radius:50%;
+    line-height:20px;
+    bottom:-2px;
+    right: -15px;
+    text-align: center;
+    @extend %sf-regular
+
+  }
+}

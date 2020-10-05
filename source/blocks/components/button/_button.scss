@@ -1,0 +1,31 @@
+.button {
+  span {
+    padding:17px 57px 15px 17px;
+    background-color: $accent-color;
+    display: inline-block;
+    margin-left: 19px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: $base-color;
+      top: 50%;
+      left: -10px;
+
+    }
+
+
+    &::after {
+      content: '\2191';
+      transform: rotate(90deg);
+      position: absolute;
+      right: 12px;
+      font-size: 50px;
+
+
+    }
+  }
+}

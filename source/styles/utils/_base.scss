@@ -1,0 +1,21 @@
+body,h1,h2,h3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height:25px;
+  background-color: $background-color;
+  color: $text-color;
+  @extend %sf-regular
+}
+
+span,p,a {
+  color: $text-color;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

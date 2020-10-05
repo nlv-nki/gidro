@@ -1,0 +1,22 @@
+.humburger {
+
+  &__btn {
+    display: none;
+    border: none;
+    background: transparent;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+  .humburger {
+    &__icon {
+      width: 33.67px;
+      height: 27px;
+    }
+    &__btn {
+      display: inline-block;
+    }
+  }
+}
