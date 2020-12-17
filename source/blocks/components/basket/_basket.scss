@@ -1,8 +1,9 @@
 .basket {
   position: relative;
+
   &__num {
     position: absolute;
-    display:inline-block;
+    display:none;
     width: 20px;
     height: 20px;
     font-size: 10px;

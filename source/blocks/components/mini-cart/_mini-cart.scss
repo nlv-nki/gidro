@@ -1,0 +1,32 @@
+.mini-cart {
+  display: none;
+  @extend %sf-regular;
+  font-size: 10px;
+  position: absolute;
+  z-index: 99;
+  background-color: #ffff;
+  top: 40px;
+  right: 0px;
+  width: 300px;
+  height: auto;
+
+  &__item {
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  &__item:hover {
+    background-color: #afa9;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+}
+
+.basket:hover .mini-cart {
+  display: block;
+}

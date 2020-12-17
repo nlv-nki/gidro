@@ -9,7 +9,8 @@
 //= ../blocks/modules/catalog/catalog.js
 //= ../blocks/modules/product-page/product-page.js
 //= ../blocks/components/mobile-menu/mobile-menu.js
-//= ../blocks/components/product-suggestion/product-suggestion.js
-
-
+//= ../blocks/components/mobile-menu/mobile-menu.js
+//= ../blocks/components/cart/cart.js
+//= ../blocks/components/basket/basket.js
+//= ../blocks/components/mini-cart/mini-cart.js
 console.log('all block loaded')

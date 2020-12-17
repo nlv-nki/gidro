@@ -1,11 +1,11 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   var popular_goods_swiper = new Swiper('.popular-goods__slider-container', {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 30,
- //   slidesPerGroup: 4,
+    //   slidesPerGroup: 4,
     freeMode: true,
-  //  loopFillGroupWithBlank: true,
+    //  loopFillGroupWithBlank: true,
 
     // pagination: {
     //   el: '.swiper-pagination',
@@ -17,12 +17,12 @@ $( document ).ready(function() {
         slidesPerView: 1,
         spaceBetween: 20
       },
-        // when window width is >= 765px
+      // when window width is >= 765px
       765: {
         slidesPerView: 2,
         spaceBetween: 15
       },
-        // when window width is >= 960px
+      // when window width is >= 960px
       960: {
         slidesPerView: 3,
         spaceBetween: 30
@@ -38,4 +38,6 @@ $( document ).ready(function() {
       prevEl: '.popular-goods__swiper-button-prev',
     },
   });
+
+
 });
