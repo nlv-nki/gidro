@@ -130,9 +130,9 @@
   }
 
 
-  // &__not-available--active .product__footer {
-  //   display: none;
-  // }
+  &__not-available--active~&__footer {
+    display: none;
+  }
 
 
 }
