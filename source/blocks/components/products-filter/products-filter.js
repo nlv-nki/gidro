@@ -15,9 +15,9 @@ $(document).ready(function () {
     $inputTo = $(".js-input-to"),
     instance,
     min = 100000,
-    max = 500000,
-    from = 200000,
-    to = 400000;
+    max = 4000000,
+    from = 100000,
+    to = 4000000;
 
 
   $range.ionRangeSlider({
@@ -60,6 +60,8 @@ $(document).ready(function () {
     instance.update({
       from: val
     });
+    console.log(instance, 777);
+
   });
 
   $inputTo.on("input", function () {
@@ -78,219 +80,106 @@ $(document).ready(function () {
   });
 
 
-
-
-
-  // $('input').change(function () {
-  //   var selector = $('input:checkbox').map(function () {
-  //     return this.checked ? '.' + this.id : '';
-  //   }).get().join('');
-  //   var all = $('div[class^="category"]');
-  //   if (selector.length)
-  //     all.hide().filter(selector).show()
-  //   else all.hide();
-  // });
-
-
-  // $('input').change(function () {
-
-  //   var selector = $('input:checkbox').map(function () {
-  //     return this.checked ? '.' + this.id : '';
-  //   }).get().join('');
-  //   console.log(selector);
-  // });
-
-
-
-  // // let product = event.target.closest(".product__item");
-  // let productTitle = product.querySelector(".product__title a").innerText;
-  // let productPrice = product.querySelector(".product__price-current")
-  //   .innerText;
-  // let productId = `productId-${product.dataset.productId}`;
-
 })
 
-// let products = document.querySelectorAll('.product__item');
-// let formFilters = document.querySelector('.products-filter__form');
-
-// let acc = Object.fromEntries(
-//   Array.from(products).map((product, index) => {
-//     return [`productId-${product.dataset.productId}`,
-//       {
-//         productTitle: product.querySelector(".product__title a").innerText,
-//         productPrice: product.querySelector(".product__price-current").innerText,
-//       }
-//     ]
-//   })
-// )
 
 
+class ProductFilter {
+  constructor({
+    filters,
+    products
+  }) {
+    this.filters = filters;
+    this.products = products;
+    this._subscribe()
 
+  }
 
-
-// formFilters.addEventListener('click', function (event) {
-
-//   Object.entries(acc).forEach((product, index, acc) => {
-
-
-//     console.dir(product);
-//     if (event.target.closest('.products-filter__submit-btn')) {
-//       console.log('form activited');
-//       acc.forEach(item => {
-//         console.log(item[1].productTitle, 666)
-//         console.log(formFilters.freeSearchByModel.value, 777)
-
-//         if (item[1].productTitle.includes(formFilters.freeSearchByModel.value)) {
-//           console.log( products.dataset.productId);
-
-
-//         }
-//       })
-
-//     }
-
-//   })
-// })
-
-
-let products = document.querySelectorAll('.product__item');
-let formFilters = document.querySelector('.products-filter__form');
-
-
-
-
-function productsCollection2() {
-  let arr = Array.from(products).map((product, index, element) => {
-    let productAvalible = true;
-    if (product.querySelector('.product__not-available').classList.contains('product__not-available--active')) {
-      productAvalible = false;
-    }
-    return [`productId-${product.dataset.productId}`,
-      {
-        'productTitle': product.querySelector(".product__title a").innerText,
-        'productPrice': product.querySelector(".product__price-current").innerText,
-        'productAvalible': productAvalible,
-        'productId': `productId-${product.dataset.productId}`,
-        'product': element[index]
+  _subscribe() {
+    this.filters.addEventListener('click', (event) => {
+      if (event.target.closest('.products-filter__submit-btn')) {
+        this.productsCollection();
+        this.filter();
       }
-    ]
-  })
-  return arr
-}
-
-
-
-
-function productsCollection() {
-
-  let obj = Object.fromEntries(
-    Array.from(products).map((product, index, element) => {
-      let productAvalible = true;
-      if (product.querySelector('.product__not-available').classList.contains('product__not-available--active')) {
-        productAvalible = false;
-      }
-      return [`productId-${product.dataset.productId}`,
-        {
-          'productTitle': product.querySelector(".product__title a").innerText,
-          'productPrice': product.querySelector(".product__price-current").innerText,
-          'productAvalible': productAvalible,
-          'productId': `productId-${product.dataset.productId}`,
-          'element': element[index]
-        }
-      ]
     })
-  )
-  return obj;
-}
+  }
 
-let productsList = productsCollection();
+  productsCollection() {
 
-console.log(productsCollection());
+    let obj = Object.fromEntries(
+      Array.from(this.products).map((product, index, element) => {
 
-if (formFilters) {
-
-  formFilters.addEventListener('click', function (event) {
-
-    if (event.target.closest('.products-filter__submit-btn')) {
-      console.log('form activited');
-
-      let checked = Array.from(formFilters).filter(input => {
-        if (input.type == "checkbox" && input.checked == true) {
-          return input
+        let productOrder;
+        let productAvalible = true;
+        if (product.querySelector('.product__not-available').classList.contains('product__not-available--active')) {
+          productAvalible = false;
+          productOrder = true;
         }
-      })
-      console.log(checked);
 
-      checked.forEach(input => {
-
-
-      })
-
-
-
-      checked.forEach(input => {
-        Object.keys(productsList).forEach(function (product) {
-          //productsList[product].element.hidden = true
-
-
-          //   productsList[product].element.style.border = '1px solid';
-          //      console.log(productsList[product].element, 9559);
-
-          //   console.log(input.name, productsList[product], 555);
-          if (!productsList[product][input.name] && !productsList[product][input.name]) {
-            productsList[product].element.hidden = true;
-
-            //productsList[product].element.style.border = '1px solid';
-            productsList[product].element.style.display = 'none';
-            console.log(input.name, productsList[product], 666);
+        return [`productId-${product.dataset.productId}`,
+          {
+            'productTitle': product.querySelector(".product__title a").innerText,
+            'productPrice': product.querySelector(".product__price-current").innerText,
+            'productAvalible': productAvalible,
+            'productOrder': productOrder,
+            'productId': `productId-${product.dataset.productId}`,
+            'element': element[index]
           }
-        })
+        ]
       })
+    )
+    return obj;
 
+  }
 
-      // Object.keys(productsList).forEach(function (product) {
-      //   console.log(product, productsList[product], 555);
+  filter() {
+    let productsList = this.productsCollection();
+    let checked = Array.from(this.filters).filter(input => {
+      if (input.type == "checkbox" && input.checked == true) {
+        return input
+      }
+    })
 
-      // })
-      // else if перебивает блок инлайном display block
-      products.forEach(product => {
-        let productTitle = product.querySelector(".product__title a").innerText;
-        console.log(productTitle);
-        if (!productTitle.includes(formFilters.freeSearchByModel.value)) {
-          product.style.display = "none";
+    let range = {
+      min: +document.querySelector('.js-input-from').value,
+      max: +document.querySelector('.js-input-to').value,
+    }
+
+    //search by checkboxes
+    checked.forEach(input => {
+      Object.keys(productsList).forEach(function (product) {
+        if (!productsList[product][input.name] && !productsList[product][input.name]) {
+          productsList[product].element.hidden = true;
+          productsList[product].element.style.display = 'none';
+
         }
-        //  else if (formFilters.freeSearchByModel.value === "") {
-        //   product.style.display = 'block';
-        // }
       })
+    })
+
+    //search by range
+    Object.keys(productsList).forEach(function (product) {
+      console.log(range.max, 999)
+      let price = +productsList[product].productPrice.split(" ").join("").slice(0, -1)
+      console.log(price, 'price ' + range.max + 'max')
+      if (price < range.min || price > range.max) {
+        productsList[product].element.style.display = 'none';
+      }
+    })
 
 
+    //search by model name
+    this.products.forEach(product => {
+      let productTitle = product.querySelector(".product__title a").innerText;
 
-    }
+      if (!productTitle.includes(this.filters.freeSearchByModel.value)) {
+        product.style.display = "none";
+      }
+    })
 
-  })
+  }
 }
 
-
-
-
-
-
-function checkSettings() {
-
-}
-
-
-function search(options) {
-
-  products.forEach(product => {
-    let productTitle = product.querySelector(".product__title a").innerText;
-    console.log(productTitle);
-    if (!productTitle.includes(formFilters.freeSearchByModel.value)) {
-      product.style.display = "none";
-    } else if (formFilters.freeSearchByModel.value === "") {
-      product.style.display = 'block';
-    }
-  })
-
-}
+new ProductFilter({
+  filters: document.querySelector('.products-filter__form'),
+  products: document.querySelectorAll('.product__item')
+})
