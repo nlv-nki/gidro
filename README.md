@@ -1,4 +1,4 @@
-﻿# Демонстрационный макет [«Гидроциклы»](https://nlv-nki.github.io/gidro/public/)
+﻿# Демонстрационный макет [«Гидроциклы»](https://nlv-nki.github.io/motoshop/public/)
 
 ### Используемые технологии
 
